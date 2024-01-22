@@ -40,8 +40,28 @@ This will do similar steps as with Maven, but the built files will be located in
 
 ## Running the Application
 
-Instructions to run the application...
+After building the project, you should have the following artifact files available:
 
+- A `*.jar` file in the target directory of the `admin` module.
+- A `*.war` file in the target directory of the `web` module.
+
+## Running the Admin Module
+
+You can run the `admin` module by executing the following command:
+
+```bash
+java -jar admin/target/admin-1.0-SNAPSHOT.jar
+```
+
+## Running the Web Module
+The war file generated after building the web module can be deployed to a Java servlet container. Here are brief instructions to do it with Apache Tomcat:
+
+1. Download Apache Tomcat from the official page.
+2. Extract the downloaded file to a location of choice. This location is referred to as CATALINA_HOME.
+3. Copy the web.war file to the webapps directory located in CATALINA_HOME.
+4. Run the startup script located in the bin folder (startup.sh or startup.bat depending on your operating system). For Unix-based systems, you might need to make the script executable by running chmod +x startup.sh.
+Your application should be accessible at http://localhost:8080/web.
+5. The port and context path could be different depending on your configuration
 
 
 
